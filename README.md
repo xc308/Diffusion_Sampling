@@ -20,11 +20,20 @@ Diffusion_Sampling/
 │       ├── loss.py               # diffusion loss
 │       ├── sampling.py           # generate samples
 │       ├── training.py           # train MLP NN model to minimize diffusion loss
-│       └── plotting.py           # plot functions for visualisation
+│       ├── plotting.py           # plot functions for 2D Gaussian points visualisation
+|       |
+|       |
+|       ├── image_data.py         # image data
+|       ├── UNet_model.py         # UNet NN model
+|       ├── image_training.py     # train UNet NN model to minimize diffusion loss
+|       └── image_plotting.py     # plot functions for image visualisation
 │
 ├── scripts/
 │   ├── train_diffusion_model.py  # execute the training, save check-point to output
-│   └── generate_samples.py       # execute the sample generation via trained NN model, load check-point
+│   ├── generate_samples.py       # execute the sample generation via trained NN model, load check-point
+|   |
+|   ├── train_UNet.py             # execute the training of UNet
+|   └── generate_image_samples.py # execute the sample generation of MNIST
 │ 
 ├── outputs/
 │   ├── checkpoints/
