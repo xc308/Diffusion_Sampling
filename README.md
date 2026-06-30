@@ -2,7 +2,7 @@
 
 This repository contains diffusion sampling, including a clean Python implementation of a score-based diffusion model on a 2D dataset and notebook explorations.
 
-The current structured implementation trains a small MLP score network on a ring-of-Gaussians target distribution using a cosine log-SNR noise schedule and v-parameterisation.
+The current structured implementation trains a MLP score network on a ring-of-Gaussians target distribution using a cosine log-SNR noise schedule and v-parameterisation.
 
 ## Repository structure
 
