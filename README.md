@@ -117,6 +117,8 @@ This loads the saved checkpoint and generates samples from the trained diffusion
 
 ![Real samples versus generated samples](outputs/figures/real_vs_generated.png)
 
+![Generated MNIST samples](outputs/figures/mnist_generated_samples.png)
+
 ## Notes
 
 The notebooks contain broader exploratory work on diffusion models, denoising diffusion, score-based diffusion, and connections with sampling and optimal transport.
