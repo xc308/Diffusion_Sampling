@@ -42,10 +42,10 @@ def main() -> None:
         score_network=diffusion_network,
         schedule=schedule,
         dataloader=dataloader,
-        num_training_steps=2_000,
+        num_training_steps=10_000,
         learning_rate=2e-4,
         parameterisation="v",
-        log_every=100,
+        log_every=500,
     )
 
     checkpoint_path = CHECKPOINT_DIR / "mnist_unet_v.pt"
