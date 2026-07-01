@@ -85,7 +85,7 @@ class ImageScoreUNet(nn.Module):
         time_features_dim = 2 * time_embedding_dim
 
         self.time_mlp = nn.Sequential(
-            nn.Linear(time_features_dim, base_channels * 4),
+            nn.Linear(time_features_dim, base_channels * 4), 
             nn.SiLU(),
             nn.Linear(base_channels * 4, base_channels * 4),
         )
@@ -190,3 +190,20 @@ class ImageScoreUNet(nn.Module):
         x = self.up1(x, time_emb)                      # (B, 32, 32, 32)
 
         return self.final_conv(x)                      # (B, 1, 32, 32)
+    
+
+
+    ## Summary:
+    # Image size change:
+        # 32 * 32         32 * 32
+        #    |               |
+        # 16 * 16         16 * 16
+            # -- 8 * 8 -- 
+
+    # Chanel size change:
+        # 1             1
+        # |             |
+        # 32            32
+        # |             |
+        # 64            64
+            # -- 128 --
